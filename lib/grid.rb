@@ -8,8 +8,15 @@ class Grid
     
     def generate(rows, cols)
       for i in 1..cols
-        @two_dim_array.push([])
+        column = []
+        for j in 1..rows
+          column.push(rand(0..1))
+        end
+        @two_dim_array.push(column)
       end
+      return
     end
+    
+    
     
 end
