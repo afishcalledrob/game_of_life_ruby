@@ -9,8 +9,8 @@ describe Grid do
     end
     
     
-    it 'should respond to the method "generate(2, 2)" by generating a two dimensional array with each element a random 1 or 0' do
-       subject.generate(2, 2)
+    it 'should respond to the method "generate(10, 10)" by generating a two dimensional array with each element a random 1 or 0' do
+       subject.generate(10, 10)
        for i in 0..1
          for j in 0..1
            expect(subject.two_dim_array[i][j]).to eq(0).or(be == 1)
