@@ -1,12 +1,19 @@
 require 'world'
 
 describe World do
-    subject(:world) { described_class.new(3, 3) }
+    GRID_SIZE = 3
     
-    it { is_expected.to respond_to(:rows, :cols) }
+    subject(:world) { described_class.new(GRID_SIZE, GRID_SIZE) }
     
-    it 'World grid dimensions should equal initialized arugments' do
-       expect(world.rows).to eq 3
-       expect(world.cols).to eq 3
-    end
+   it { is_expected.to respond_to(:row_number, :col_number, :grid) }
+   
+   it 'Number of rows and columns is equal to initialized arguments' do
+     expect(subject.row_number).to eq(GRID_SIZE)
+     expect(subject.col_number).to eq(GRID_SIZE)
+   end
+   
+   it 'Should generate a grid with the argument number of rows and columns' do
+      expect(subject.grid[0].length).to eq GRID_SIZE
+      expect(subject.grid[1].length).to eq GRID_SIZE
+   end
 end
