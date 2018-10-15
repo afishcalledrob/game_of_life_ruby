@@ -13,8 +13,8 @@ class Cell
     end
     
     def set_status(arg)
-        alive = true if arg == 'alive'
-        alive = false if arg == 'dead'
+        @alive = true if arg == 'alive'
+        @alive = false if arg == 'dead'
     end
     
 end
